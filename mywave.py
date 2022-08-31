@@ -127,8 +127,6 @@ class Wave_read:
         self._convert = None
         self._soundpos = 0
         self._file = Chunk(file, bigendian = 0)
-        if self._file.read(4) != b'WAVE':
-            raise Error('not a WAVE file')
         self._fmt_chunk_read = 0
         self._data_chunk = None
         while 1:
