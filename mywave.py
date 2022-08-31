@@ -128,6 +128,7 @@ class Wave_read:
         self._soundpos = 0
         self._file = Chunk(file, bigendian = 0)
         print(self._file.getname())
+        print("=======================NAME=====================")    
         if self._file.getname() != b'RIFF':
             raise Error('file does not start with RIFF id')
         if self._file.read(4) != b'WAVE':
